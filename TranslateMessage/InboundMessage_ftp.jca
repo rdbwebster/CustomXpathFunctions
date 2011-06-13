@@ -1,0 +1,19 @@
+<adapter-config name="InboundMessage" adapter="Ftp Adapter" wsdlLocation="InboundMessage.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="eis/Ftp/FtpAdapter" UIincludeWildcard="*.dat" adapterRef=""/>
+  <endpoint-activation portType="Get_ptt" operation="Get">
+    <activation-spec className="oracle.tip.adapter.ftp.inbound.FTPActivationSpec">
+      <property name="FileType" value="ascii"/>
+      <property name="UseHeaders" value="false"/>
+      <property name="PhysicalDirectory" value="c:\temp"/>
+      <property name="Recursive" value="true"/>
+      <property name="DeleteFile" value="false"/>
+      <property name="IncludeFiles" value=".*\.dat"/>
+      <property name="PollingFrequency" value="1200"/>
+      <property name="MinimumAge" value="0"/>
+      <property name="FileModificationTime" value="FileSystem"/>
+      <property name="ModificationTimeFormat" value="4,18,yyyyMMddHHmmSS"/>
+    </activation-spec>
+  </endpoint-activation>
+
+</adapter-config>

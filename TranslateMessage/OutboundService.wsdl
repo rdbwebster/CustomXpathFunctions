@@ -1,0 +1,21 @@
+<?binding.jca OutboundService_file.jca?>
+<wsdl:definitions name="OutboundService" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/file/XPathFunctionExample/TranslateMessage/OutboundService" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/file/XPathFunctionExample/TranslateMessage/OutboundService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:imp1="urn:hl7-org:v3" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/">
+    <plt:partnerLinkType name="Write_plt">
+        <plt:role name="Write_role">
+            <plt:portType name="tns:Write_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="urn:hl7-org:v3" schemaLocation="xsd/HL7/FIAB_IN010001UV01.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="Write_msg">
+        <wsdl:part name="body" element="imp1:FIAB_IN010001UV01"/>
+    </wsdl:message>
+    <wsdl:portType name="Write_ptt">
+        <wsdl:operation name="Write">
+            <wsdl:input message="tns:Write_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

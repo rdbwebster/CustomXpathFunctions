@@ -1,0 +1,21 @@
+<?binding.jca InboundMessage_ftp.jca?>
+<wsdl:definitions name="InboundMessage" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/ftp/XPathFunctionExample/TranslateMessage/InboundMessage" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/ftp/XPathFunctionExample/TranslateMessage/InboundMessage" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:imp1="urn:oracle:integration:b2b:F6584ABE381B43298151720795E2910B" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/">
+    <plt:partnerLinkType name="Get_plt">
+        <plt:role name="Get_role">
+            <plt:portType name="tns:Get_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="urn:oracle:integration:b2b:F6584ABE381B43298151720795E2910B" schemaLocation="xsd/HL7/ADT_A01.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="Get_msg">
+        <wsdl:part name="body" element="imp1:ADT_A01"/>
+    </wsdl:message>
+    <wsdl:portType name="Get_ptt">
+        <wsdl:operation name="Get">
+            <wsdl:input message="tns:Get_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

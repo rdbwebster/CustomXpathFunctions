@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soa-xpath-functions version="11.1.1" 
+   xmlns="http://xmlns.oracle.com/soa/config/xpath"
+   xmlns:mf="http://www.oracle.com/XSL/Transform/java/com.example.reusable.asset">
+    <function name="mf:sortEmployees">
+    <className>com.example.reusable.asset.SortEmployees</className>
+    <return type="node-set"/>
+    <params>
+      <param name="empList" type="node-set"/>
+    </params>
+    <desc/>
+    <detail>
+       <![CDATA[This function sorts a list of employees.]]>
+    </detail>
+   </function>
+</soa-xpath-functions>
+

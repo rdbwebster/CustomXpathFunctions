@@ -1,0 +1,15 @@
+<soa-xpath-functions version="11.1.1"
+xmlns="http://xmlns.oracle.com/soa/config/xpath"
+xmlns:geo="http://www.oracle.com/XSL/Transform/java/com.example.reusable.asset.CheckDept">
+<function name="geo:checkDept">
+<className>com.example.reusable.asset.CheckDept</className>
+<return type="string"/>
+<params>
+<param name="value" type="string"/>
+</params>
+<desc/>
+<detail>
+<![CDATA[This function returns a department of 999 if a department is not set.]]>
+</detail>
+</function>
+</soa-xpath-functions>

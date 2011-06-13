@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://www.example.org"
+            targetNamespace="http://www.example.org"
+            elementFormDefault="qualified">
+   <xs:element name="Employees" type="EmpCollection"/>
+   <xs:complexType name="EmpCollection">
+      <xs:sequence>
+         <xs:element name="Emp" type="Emp" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Emp">
+      <xs:sequence>
+         <xs:element name="number" type="xs:int"/>
+         <xs:element name="firstName" nillable="true">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="10"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+          <xs:element name="lastName" nillable="true">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="10"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="job" nillable="true">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="12"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="hiredate" type="xs:date" nillable="true"/>
+         <xs:element name="dept" type="xs:int" nillable="true"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

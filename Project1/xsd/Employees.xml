@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="./FileEmployee.xsd"
+           xmlns="http://www.example.org">
+  <Emp>
+    <number>2315</number>
+    <firstName>Bob</firstName>
+    <lastName>Jones</lastName>
+    <job>Clerk</job>
+    <hiredate>2002-09-24</hiredate>
+    <dept>103</dept>
+  </Emp>
+  <Emp>
+    <number>2315</number>   <!-- deliberate duplicate for human intervention -->
+    <firstName>Mary</firstName>
+    <lastName>Laroche</lastName>
+    <job>Purchaser</job>
+    <hiredate>1999-09-24</hiredate>
+    <dept>207</dept>
+  </Emp>
+</Employees>

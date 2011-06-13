@@ -1,0 +1,30 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    	<soap:Body xmlns:ns1="http://www.example.org">
+<ns1:Employees>
+  <ns1:Emp>
+    <ns1:number>2315</ns1:number>
+    <ns1:firstName>Bob</ns1:firstName>
+    <ns1:lastName>Jones</ns1:lastName>
+    <ns1:job>Accountant</ns1:job>
+    <ns1:hiredate></ns1:hiredate>
+    <ns1:dept>103</ns1:dept>
+  </ns1:Emp>
+   <ns1:Emp>
+    <ns1:number>2300</ns1:number>
+    <ns1:firstName>David</ns1:firstName>
+    <ns1:lastName>Last</ns1:lastName>
+    <ns1:job>President</ns1:job>
+    <ns1:hiredate></ns1:hiredate>
+    <ns1:dept></ns1:dept>
+  </ns1:Emp>
+  <ns1:Emp>
+    <ns1:number>1300</ns1:number>
+    <ns1:firstName>Betty</ns1:firstName>
+    <ns1:lastName>Black</ns1:lastName>
+    <ns1:job>Sales Rep</ns1:job>
+    <ns1:hiredate></ns1:hiredate>
+    <ns1:dept>101</ns1:dept>
+  </ns1:Emp>
+</ns1:Employees>
+    </soap:Body>
+</soap:Envelope>
